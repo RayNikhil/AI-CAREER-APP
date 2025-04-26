@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Career Quiz - CareerSense</title>
+    <style>
+        body {
+          background-color: white;
+          color: black;
+          transition: 0.3s;
+        }
+        body.dark-mode {
+          background-color: #121212;
+          color: white;
+        }
+      </style>
+      <script>
+        function toggleDarkMode() {
+          document.body.classList.toggle("dark-mode");
+        }
+      </script>
+      
+</head>
+<body style="text-align:center;">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <h2>Career Interest Quiz</h2>
+    <form action="/get_career" method="post">
+        <ol style="text-align:left; max-width:600px; margin:auto;">
+            <li>
+                What do you enjoy most?<br>
+                <input type="radio" name="q1" value="coding"> Solving puzzles<br>
+                <input type="radio" name="q1" value="design"> Making things look beautiful<br>
+                <input type="radio" name="q1" value="talking"> Talking with people<br>
+                <input type="radio" name="q1" value="teaching"> Explaining things<br>
+            </li><br>
+            
+            <li>
+                What would you prefer to do?<br>
+                <input type="radio" name="q2" value="coding"> Build an app<br>
+                <input type="radio" name="q2" value="design"> Design a logo<br>
+                <input type="radio" name="q2" value="talking"> Speak in a seminar<br>
+                <input type="radio" name="q2" value="teaching"> Help a friend study<br>
+            </li><br>
+            
+            <li>
+                What's your dream project?<br>
+                <input type="radio" name="q3" value="coding"> Create a game<br>
+                <input type="radio" name="q3" value="design"> Make a poster<br>
+                <input type="radio" name="q3" value="talking"> Organize an event<br>
+                <input type="radio" name="q3" value="teaching"> Tutor a student<br>
+            </li><br>
+            
+            <li>
+                Which activity sounds fun?<br>
+                <input type="radio" name="q4" value="coding"> Coding hackathon<br>
+                <input type="radio" name="q4" value="design"> Poster designing<br>
+                <input type="radio" name="q4" value="talking"> Group discussion<br>
+                <input type="radio" name="q4" value="teaching"> Teaching in class<br>
+            </li><br>
+            
+            <li>
+                Choose your favorite school subject:<br>
+                <input type="radio" name="q5" value="coding"> Computer Science<br>
+                <input type="radio" name="q5" value="design"> Art<br>
+                <input type="radio" name="q5" value="talking"> English<br>
+                <input type="radio" name="q5" value="teaching"> Math<br>
+            </li><br>
+            
+            <li>
+                What would you love to improve?<br>
+                <input type="radio" name="q6" value="coding"> Programming skills<br>
+                <input type="radio" name="q6" value="design"> Creativity<br>
+                <input type="radio" name="q6" value="talking"> Communication<br>
+                <input type="radio" name="q6" value="teaching"> Knowledge sharing<br>
+            </li><br>
+            
+            <li>
+                Which tool do you want to learn?<br>
+                <input type="radio" name="q7" value="coding"> Python<br>
+                <input type="radio" name="q7" value="design"> Figma<br>
+                <input type="radio" name="q7" value="talking"> PowerPoint<br>
+                <input type="radio" name="q7" value="teaching"> Whiteboard<br>
+            </li><br>
+            
+            <li>
+                Your weekend plan would be:<br>
+                <input type="radio" name="q8" value="coding"> Code a side project<br>
+                <input type="radio" name="q8" value="design"> Try digital painting<br>
+                <input type="radio" name="q8" value="talking"> Host a podcast<br>
+                <input type="radio" name="q8" value="teaching"> Teach your sibling<br>
+            </li><br>
+            
+            <li>
+                What motivates you?<br>
+                <input type="radio" name="q9" value="coding"> Solving problems<br>
+                <input type="radio" name="q9" value="design"> Expressing ideas<br>
+                <input type="radio" name="q9" value="talking"> Inspiring others<br>
+                <input type="radio" name="q9" value="teaching"> Helping people grow<br>
+            </li><br>
+            
+            <li>
+                Final Question: What excites you most?<br>
+                <input type="radio" name="q10" value="coding"> Writing code<br>
+                <input type="radio" name="q10" value="design"> Creating designs<br>
+                <input type="radio" name="q10" value="talking"> Talking with people<br>
+                <input type="radio" name="q10" value="teaching"> Teaching others<br>
+            </li><br>
+        </ol>        
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>

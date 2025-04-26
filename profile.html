@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CareerSense Profile</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</head>
+<body style="text-align: center;">
+
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+
+  <h1>Welcome to Your Profile</h1>
+  <p>Name: {{ session.get('user', 'Student') }}</p>
+
+  <br>
+  
+  <a href="/chat">Talk to Career Mentor</a><br><br>
+  <a href="/skill-tracker">Skill Tracker</a><br><br>
+  <a href="/certificate">Download Certificate</a>
+
+</body>
+</html>

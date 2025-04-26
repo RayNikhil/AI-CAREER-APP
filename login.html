@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login - CareerSense</title>
+    <style>
+        body {
+          background-color: white;
+          color: black;
+          transition: 0.3s;
+        }
+        body.dark-mode {
+          background-color: #121212;
+          color: white;
+        }
+      </style>
+      <script>
+        function toggleDarkMode() {
+          document.body.classList.toggle("dark-mode");
+        }
+      </script>
+      
+</head>
+<body style="text-align:center;">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <h2>Login to CareerSense</h2>
+    <form action="/login" method="post">
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <br>
+    <a href="/signup">Don't have an account? Signup</a>
+
+</body>
+</html>

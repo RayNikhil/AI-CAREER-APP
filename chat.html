@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CareerSense AI Mentor</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</head>
+<body style="text-align: center;">
+
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <h2>Talk to Your Career Mentor</h2>
+
+  <form method="post">
+    <input type="text" name="question" placeholder="Ask anything..." style="width:300px;" required>
+    <button type="submit">Ask</button>
+  </form>
+
+  {% if reply %}
+    <h3>Mentor Says:</h3>
+    <p>{{ reply }}</p>
+  {% endif %}
+
+  <br><br>
+  <a href="/profile">Back to Profile</a>
+
+</body>
+</html>

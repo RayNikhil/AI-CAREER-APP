@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Your Career</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+  
+</head>
+<body style="text-align:center;">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <h2>Your Suggested Career is:</h2>
+  <h1>{{ career }}</h1>
+
+  <h3>Career Roadmap:</h3>
+  <ul style="list-style-type:none;">
+    {% for step in roadmap %}
+      <li>✅ {{ step }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="/"><button>Go Home</button></a>
+</body>
+</html>
+
